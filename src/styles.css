@@ -1,10 +1,22 @@
+.card {
+    display: inline-block;
+    background-color: darkblue;
+    border: 3px;
+    padding: 3px;
+    margin: 2px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.card:hover {
+    transition: all .2s ease-in-out;
+}
 
 
 .title {
     background-color: darkgray;
     color: lightblue;
     text-align: center;
-    font-family: 'rick_and_mortymedium';
 }
 
 body {

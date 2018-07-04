@@ -12,8 +12,9 @@ class Board extends Component {
 
     }
     componentDidMount() {
-        axios('https://rickandmortyapi.com/api/character/2')
+        axios('https://rickandmortyapi.com/api/character/34')
         .then((characters) => {
+            console.log(characters)
             this.setState({ 
                 characters : characters.data.image
                 })
