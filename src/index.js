@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const Index = () => {
-    return <div>REACT </div>;
-};
+import App from "./components/App.jsx";
+import styles from "./styles.css";
 
 
-ReactDOM.render(<Index/>, document.getElementById("index"));
+
+
+ReactDOM.render(<App/>, document.getElementById("index"));
