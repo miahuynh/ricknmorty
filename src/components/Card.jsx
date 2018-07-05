@@ -8,7 +8,9 @@ const Card = ({ data }) => {
         <div>
         <h2>Name: {data.name}</h2>
         <p>Status: {data.status}</p>
+        <p>Gender: {data.gender}</p>
         <p>Species: {data.species}</p>
+        <p>Created: {data.created}</p>
         </div>
         </div>
     )

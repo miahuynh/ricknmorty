@@ -34,7 +34,6 @@ class Board extends Component {
     
 
     render() {
-        console.log('render', this.state.characterList)
         return (
                 <div className="board">
                 <h1 className="title">Get Schwifty</h1>
