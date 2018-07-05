@@ -1,25 +1,52 @@
+
+@font-face {
+    font-family: 'rick_and_mortymedium';
+    src: url('./components/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff2') format('woff2'),
+         url('./components/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .card {
     display: inline-block;
-    background-color: darkblue;
-    border: 3px;
+    background-color: lightgreen;
+    color: black;
+    border: 2px;
     padding: 3px;
     margin: 2px;
-    border-radius: 2px;
+    border-radius: 3px;
     text-align: center;
+    transition: transform .2s;
 }
 
 .card:hover {
-    transition: all .2s ease-in-out;
+    transform: scale(1.2);
 }
 
+.characterList {
+    margin: 10px;
+}
 
 .title {
-    background-color: darkgray;
-    color: lightblue;
     text-align: center;
+    font-size: 3rem;
 }
 
 body {
-    background-color: darkgrey;
+    font-family: 'rick_and_mortymedium';
+    background-image: url('https://image.ibb.co/mY5Q4y/backgroundpic.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
 
+.searchBox {
+    text-align: center; 
+}
+
+.textBox {
+    background-color: aliceblue;
 }

@@ -1,6 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
     filename: "./index.html"
@@ -20,7 +19,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            }        
+            }, 
+            {
+                test: /\.(eot|svg|tff|woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                    name: './src/components/[name].[ext]',
+                },
+            },        
         ],
     },
     plugins: [htmlPlugin]

@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'rick_and_mortymedium';
+    src: url('rick_and_morty_by_shittychan-d9h2vl6-webfont.woff2') format('woff2'),
+         url('rick_and_morty_by_shittychan-d9h2vl6-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.title {
+    font-family: 'rick_and_mortymedium';
+}
