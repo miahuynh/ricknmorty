@@ -1,7 +1,7 @@
-const User = require('./model');
+const User = require('./userModel');
 
 const UserController = {
-  // Create a new student in the Database
+  // Create a new user in the Database
   // Their information will be sent in the request body
   // This should send the created student
   createUser(req, res) {
@@ -15,23 +15,35 @@ const UserController = {
   // Their first name will be in the request parameter 'name'
   // This should send the found student
   getUser(req, res) {
-    User.find({username: req.params.name}, (err, data) => {
+    console.log(req.params.firstName);
+    User.find({firstName: req.params.firstName}, (err, data) => {
       if (err) res.status(418).send(err);
       return res.json(data);
     });
   },
 
-  // Get a student from the database and update the student
-  // The student's first name will be in the request parameter 'name'
-  // The student's new first name will be in the request body
+  // Get a user from the database and update the user's name and password
+  // The user's first name will be in the request parameter 'name'
+  // The user's new first name will be in the request body
+  updateUser(req, res) {
+    User.updateOne({firstName: req.params.name}, {firstName: req.body.firstName}, (err, data) => {
+      if (err) res.status(418).send(err);
+      else res.json(data);
+    });
+    User.updateOne({firstName: req.params.name}, {password: req.body.password}, (err, data) => {
+      if (err) res.status(418).send(err);
+      else res.json(data);
+    });
+  },
 
-  // Delete a student from the database
-  // The student's first name will be sent in the request parameter 'name'
+  // Delete a user from the database
+  // The user's first name will be sent in the request parameter 'name'
   // This should send a success status code
   deleteUser(req, res) {
-    User.deleteOne({username: req.params.firstName}, (err, data) => {
+    User.deleteOne({firstName: req.params.firstName}, (err, data) => {
       if (err) res.status(418).send(err);
-      else res.send('deleted : )');
+      if (!req.params.firstName) res.status(404).send('User does not exist to delete.');
+      else res.send('User has been deleted.');
     });
   }
 };
