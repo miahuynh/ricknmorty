@@ -6,12 +6,12 @@ const CardsDisplay = ({ characterLists }) => {
         return <Card data={data} key={i} />
     });
     return (
-    <div className="cards-container">
+        <div className="cards-container">
             <h1 className="characterList">Ricksy Business</h1>
-        <div className="cardsDisplay">
+            <div className="cardsDisplay">
             {characterArray}
+            </div>
         </div>
-    </div>
 );
 }
 

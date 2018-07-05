@@ -39,6 +39,7 @@
 .characterList {
     text-align: center;
     justify-content: center;
+    font-size: 40px;
 }
 
 .title {
@@ -76,6 +77,6 @@ body {
     border-radius: 10px;
 }
 
-.characterList {
-    font-size: 40px;
+p {
+    font-size: 25px;
 }
