@@ -10,13 +10,26 @@
 
 .card {
     display: inline-block;
-    background-color: lightgreen;
+    background-color: rgb(192, 245, 219);
     color: black;
     padding: 4px;
     margin: 3px;
     border-radius: 3px;
     text-align: center;
     transition: transform .2s;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsDisplay {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card:hover {
@@ -48,7 +61,13 @@ body {
 }
 
 .textBox {
+    justify-content: center;
+    font-size: 23px;
+    font-family: 'rick_and_mortymedium';
     background-color: aliceblue;
-    padding: 5px;
-
+    width: 35%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
 }

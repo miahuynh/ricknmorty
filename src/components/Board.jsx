@@ -13,10 +13,11 @@ class Board extends Component {
             searchField: ''
         }
         this.getCharacters = this.getCharacters.bind(this);
+        this.onSearchChange = this.onSearchChange.bind(this);
     }
 
     onSearchChange(event) {
-        console.log(event.target.value);
+        this.setState({searchField: event.target.value})
     }
 
     getCharacters(numbers) {
@@ -31,7 +32,7 @@ class Board extends Component {
 
     componentDidMount() {
         const arr = [];
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 12; i++) {
             arr.push(Math.floor(Math.random() * 320))
         }
         this.getCharacters(arr);
@@ -39,11 +40,15 @@ class Board extends Component {
     
 
     render() {
+        const filteredCharacters = this.state.characterLists.filter(character => {
+            let name = character.name.toLowerCase();
+            return name.includes(this.state.searchField.toLowerCase())
+        });
         return (
                 <div className="board">
                 <h1 className="title">Get Schwifty</h1>
                 <SearchBox searchChange={this.onSearchChange} />
-                <CardsDisplay characterLists={this.state.characterLists} />
+                <CardsDisplay characterLists={filteredCharacters} />
                 </div>
             )
     }
