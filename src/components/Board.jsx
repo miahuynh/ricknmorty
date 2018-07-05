@@ -3,6 +3,7 @@ import CardsDisplay from './CardsDisplay.jsx'
 import axios from 'axios';
 import SearchBox from './SearchBox.jsx';
 import './Board.css'
+import Scroll from './Scroll.jsx';
 
 
 class Board extends Component {
@@ -48,7 +49,9 @@ class Board extends Component {
                 <div className="board">
                 <h1 className="title">Get Schwifty</h1>
                 <SearchBox searchChange={this.onSearchChange} />
-                <CardsDisplay characterLists={filteredCharacters} />
+                <Scroll>
+                    <CardsDisplay characterLists={filteredCharacters} />
+                </Scroll>
                 </div>
             )
     }

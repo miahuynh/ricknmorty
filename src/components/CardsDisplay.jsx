@@ -7,7 +7,7 @@ const CardsDisplay = ({ characterLists }) => {
     });
     return (
     <div className="cards-container">
-            <h1 className="characterList">CHARACTER LIST</h1>
+            <h1 className="characterList">Ricksy Business</h1>
         <div className="cardsDisplay">
             {characterArray}
         </div>
