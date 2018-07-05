@@ -10,8 +10,13 @@ class Board extends Component {
         super(props);
         this.state = {
             characterLists: [],
+            searchField: ''
         }
         this.getCharacters = this.getCharacters.bind(this);
+    }
+
+    onSearchChange(event) {
+        console.log(event.target.value);
     }
 
     getCharacters(numbers) {
@@ -26,7 +31,7 @@ class Board extends Component {
 
     componentDidMount() {
         const arr = [];
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 8; i++) {
             arr.push(Math.floor(Math.random() * 320))
         }
         this.getCharacters(arr);
@@ -37,8 +42,8 @@ class Board extends Component {
         return (
                 <div className="board">
                 <h1 className="title">Get Schwifty</h1>
-                <SearchBox/>
-                <CardsDisplay characterLists = {this.state.characterLists} />
+                <SearchBox searchChange={this.onSearchChange} />
+                <CardsDisplay characterLists={this.state.characterLists} />
                 </div>
             )
     }
