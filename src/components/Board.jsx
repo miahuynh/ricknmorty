@@ -4,6 +4,7 @@ import axios from 'axios';
 import SearchBox from './SearchBox.jsx';
 import './Board.css'
 import Scroll from './Scroll.jsx';
+import SignUp from './SignUp.jsx';
 
 
 class Board extends Component {
@@ -12,7 +13,8 @@ class Board extends Component {
         this.state = {
             characterLists: [],
             searchField: '',
-            formField: ''
+            formField: '',
+            firstName: '',
         }
         this.getCharacters = this.getCharacters.bind(this);
         this.onSearchChange = this.onSearchChange.bind(this);
@@ -20,7 +22,18 @@ class Board extends Component {
     }
 
     handleSubmit(event) {
-        this.setState({formField: event.target.value});
+        console.log('event', event)
+        let firstName = document.getElementById('firstName').value;
+        let lastName = document.getElementById('lastName').value;
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+
+        axios.post('/user', {firstName, lastName, username, password})
+            .then(res => res.send())
+            .catch(err => console.log('mistake', err));
+            alert("Wubba lubba dub dub! Welcome to the club! ;)");
+            event.target.reset();
+            event.preventDefault();
     }
 
     onSearchChange(event) {
@@ -53,6 +66,7 @@ class Board extends Component {
         });
         return (
             <div className="board">
+                <SignUp handleSubmit={this.handleSubmit}/>
                 <h1 className="title">Get Schwifty</h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <Scroll>

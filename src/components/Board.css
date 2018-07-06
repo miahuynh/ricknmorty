@@ -8,6 +8,10 @@
 
 }
 
+body {
+    font-family: 'rick_and_mortymedium';
+}
+
 .title {
     font-family: 'rick_and_mortymedium';
 }

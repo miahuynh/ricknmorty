@@ -1,17 +1,29 @@
 import React from 'react';
 
-const SignUp = () => {
+const SignUp = ({ handleSubmit }) => {
     return (
-        <div className="signUp">
-            <form onSubmit ={this.handleSubmit}>
+        <div>
+            <form className="signUp">
                 <label className="label">
-                    Name: 
+                    First Name:  <input type="text" placeholder="firstName" id="firstName"/>
                 </label>
-                <input type="text" name="firstName" value='Name?'/>
-                <input type="submit" value="submit"/>
+                <label className="label">
+                    Last Name:  <input type="text" placeholder="lastName" id="lastName"/>
+                </label>
+                <label className="label">
+                    Username:  <input type="text" placeholder="username" id="username"/>
+                </label>
+                <label className="label">
+                    Password:  <input type="password" placeholder="password" id="password"/>
+                </label>
+                <button type="button" onClick={handleSubmit} className="btn"> Submit</button>
             </form>
         </div>
     )
 }
 
-export default Signup;
+
+
+
+
+export default SignUp;

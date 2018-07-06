@@ -2,10 +2,21 @@
 @font-face {
     font-family: 'rick_and_mortymedium';
     src: url('./components/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff2') format('woff2'),
-         url('./components/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff') format('woff');
+    url('./components/rick_and_morty_by_shittychan-d9h2vl6-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    
+}
 
+body {
+    font-family: 'rick_and_mortymedium';
+    background-image: url('https://image.ibb.co/mY5Q4y/backgroundpic.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-size: 24px;
 }
 
 .card {
@@ -51,15 +62,6 @@
     margin-bottom: 20px;
 }
 
-body {
-    font-family: 'rick_and_mortymedium';
-    background-image: url('https://image.ibb.co/mY5Q4y/backgroundpic.jpg');
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    color: white;
-}
 
 .searchBox {
     text-align: center; 
@@ -79,4 +81,32 @@ body {
 
 p {
     font-size: 25px;
+}
+
+.btn {
+    border-left: 2px;
+    padding: 2px 2px 2px 2px;
+    margin: 4px 4px;
+}
+
+.signUp {
+    text-align: center;
+    justify-content: center;
+}
+
+
+.formField {
+    font-size: 24px;
+    text-align: center;
+}
+
+.btn {
+    font-family: 'rick_and_mortymedium';
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.label {
+    padding-right: 7px;
 }
