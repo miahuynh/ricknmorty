@@ -3,13 +3,13 @@ import Board from './Board.jsx';
 
 
 class App extends Component {
-    render() {
-        return (
-            <div>
-            <Board/>
-            </div>
-        )
-    }
+render() {
+	return (
+			<div>
+				<Board/>
+			</div>
+		)
+	}
 }
 
 export default App;
