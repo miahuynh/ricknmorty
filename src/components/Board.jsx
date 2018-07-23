@@ -29,10 +29,9 @@ class Board extends Component {
         let password = document.getElementById('password').value;
 
         axios.post('/user', {firstName, lastName, username, password})
-            .then(res => res.send())
-            .catch(err => console.log('mistake', err));
-            alert("Wubba lubba dub dub! Welcome to the club! ;)");
-            event.target.reset();
+        .then(res => res.send())
+        .catch(err => console.log('mistake', err));
+        alert("Wubba lubba dub dub! Welcome to the club! ;)");
             event.preventDefault();
     }
 
